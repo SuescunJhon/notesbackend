@@ -1,0 +1,18 @@
+{
+  "name": "notesbackend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build:ui": "rm -rf dist && cd ../notesfronted/ && bun run build && cp -r dist ../notesbackend/",
+    "build:full": "bun run build:ui && git add . && git commit -m uibuild && git push",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jhon",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
