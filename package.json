@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node index.js",
     "build:ui": "rm -rf dist && cd ../notesfronted/ && bun run build && cp -r dist ../notesbackend/",
-    "build:full": "bun run build:ui && git add . && git commit -m uibuild && git push",
+    "deploy:full": "bun run build:ui && git add . && git commit -m uibuild && git push",
     "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
